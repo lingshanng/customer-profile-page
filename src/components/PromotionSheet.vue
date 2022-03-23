@@ -10,21 +10,21 @@
             :color="mode == 'all' ? 'primary' : ''"
             @click="mode = 'all'"
           >
-            All</v-btn
-          >
+            All
+          </v-btn>
           <v-btn
             depressed
             :color="mode == 'discount' ? 'primary' : ''"
             @click="mode = 'discount'"
           >
-            Discount</v-btn
-          >
+            Discount
+          </v-btn>
           <v-btn
             depressed
             :color="mode == 'redeem' ? 'primary' : ''"
             @click="mode = 'redeem'"
-            >Redeem</v-btn
-          >
+            >Redeem
+          </v-btn>
         </div>
         <div class="promotion-items">
           <promotion-item v-for="p in getPromotions" :key="p.title" :item="p" />

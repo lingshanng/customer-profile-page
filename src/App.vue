@@ -41,19 +41,3 @@ export default {
   },
 };
 </script>
-<style scoped>
-/* .profile-sheet {
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  overflow-wrap: anywhere;
-} 
-*/
-
-/* .subheader {
-  font-size: 16px;
-  font-weight: bold;
-} */
-</style>

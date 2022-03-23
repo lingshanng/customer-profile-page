@@ -14,8 +14,9 @@
             <div class="name">{{ name }}</div>
             <div class="email">{{ email }}</div>
             <v-btn small class="edit-btn">
-              <v-icon small>mdi-pencil</v-icon>Edit</v-btn
-            >
+              <v-icon small>mdi-pencil</v-icon>
+              Edit
+            </v-btn>
           </div>
         </div>
       </v-container>
