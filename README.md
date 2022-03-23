@@ -1,24 +1,10 @@
-# customer-profile-page
+# Customer Profile Page
 
-## Project setup
-```
-yarn install
-```
+## Application setup
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+1. Install the latest version of NodeJS and npm.
+2. Clone this repository.
+3. Navigate to the root folder of the application in the command line.
+4. Type `npm install` to install required npm packages.
+5. Type `npm run serve` to start a development server.
+6. The site opens in your browser at http://localhost:8080.

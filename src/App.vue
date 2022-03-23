@@ -1,28 +1,59 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <v-app>
+    <v-main class="grey lighten-3">
+      <v-container>
+        <v-row>
+          <v-col>
+            <profile-sheet
+              v-if="customer"
+              :name="customer.name"
+              :email="customer.email"
+            />
+            <v-skeleton-loader v-else type="image" />
+          </v-col>
+        </v-row>
+        <v-row>
+          <v-col>
+            <promotion-sheet
+              v-if="customer"
+              :promotions="customer.promotions"
+            />
+            <v-skeleton-loader v-else type="image" />
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import { getCustomerData } from "./api/beep.js";
+import ProfileSheet from "./components/ProfileSheet.vue";
+import PromotionSheet from "./components/PromotionSheet.vue";
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  name: "App",
+  components: { ProfileSheet, PromotionSheet },
+  data: () => ({
+    customer: null,
+  }),
+  mounted: async function () {
+    this.customer = await getCustomerData();
+  },
+};
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+<style scoped>
+/* .profile-sheet {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  overflow-wrap: anywhere;
+} 
+*/
+
+/* .subheader {
+  font-size: 16px;
+  font-weight: bold;
+} */
 </style>
